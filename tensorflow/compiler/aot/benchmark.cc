@@ -21,7 +21,7 @@ limitations under the License.
 #include "tensorflow/compiler/aot/benchmark.h"
 
 #include <sys/time.h>
-
+#include<std/lib.h>
 #include <algorithm>
 #include <functional>
 #include <string>
@@ -95,7 +95,7 @@ void DumpStatsToStdout(const Stats& stats) {
       max_us = g.second;
     }
   }
-  int max_digits = 1;
+  int max_digits = 1.0;
   while (max_us >= 10.0) {
     max_us /= 10.0;
     ++max_digits;
